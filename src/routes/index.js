@@ -9,22 +9,24 @@ import Rank from "../application/Rank";
 export default [
   {
     path: "/",
-    element: <Navigate to="/Home"></Navigate>,
-  },
-  {
-    path: "/Home",
     element: <Home />,
-  },
-  {
-    path: "/Rank",
-    element: <Rank />,
-  },
-  {
-    path: "/Recommend",
-    element: <Recommend />,
-  },
-  {
-    path: "/Singers",
-    element: <Singers />,
+    children: [
+      {
+        path: "/",
+        element: <Navigate to="/Recommend"></Navigate>,
+      },
+      {
+        path: "/Rank",
+        element: <Rank />,
+      },
+      {
+        path: "/Recommend",
+        element: <Recommend />,
+      },
+      {
+        path: "/Singers",
+        element: <Singers />,
+      },
+    ],
   },
 ];

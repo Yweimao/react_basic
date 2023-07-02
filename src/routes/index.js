@@ -7,6 +7,7 @@ import Rank from "../application/Rank";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
+  { path: "/Home", element: <Home /> },
   {
     path: "/",
     element: <Home />,
@@ -15,6 +16,7 @@ export default [
         path: "/",
         element: <Navigate to="/Recommend"></Navigate>,
       },
+
       {
         path: "/Rank",
         element: <Rank />,
